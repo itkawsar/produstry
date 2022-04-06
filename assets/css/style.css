@@ -1,0 +1,470 @@
+/* 
+------------------
+Template Name: Construction
+Author: CreativeITinstitute
+Author Email: connectkawsar@gmail.com
+Template Designer:Shamima Sultana Nipa
+------------------
+
+1.Table of content index page
+============================
+Top Header part
+Navbar part
+Banner part
+Service Part
+
+*/
+
+
+/* Common Section CSS Start*/
+
+:root {
+    --primary-color: #FFCA36;
+    --secondary-color: #353535;
+    --fast-transition: all .4s linear;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+ol,
+span,
+small {
+    margin: 0;
+    padding: 0;
+}
+
+p,
+a {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 700;
+}
+
+li {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+img {
+    border: none;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Common Section CSS End*/
+
+
+/* Top Header Section CSS Start*/
+
+#top_header {
+    background-color: var(--primary-color);
+}
+
+.top_left p i {
+    padding-right: 5px;
+}
+
+.top_mid {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 10px;
+    /* if you want you can use clip-path instead of transform
+    clip-path: polygon(6% 0, 100% 0%, 94% 100%, 0% 100%);*/
+    transform: skewX(-45deg);
+}
+
+.top_mid p {
+    transform: skewX(45deg);
+}
+
+.top_mid span {
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.top_right ul {}
+
+.top_right ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.top_right ul li::after,
+.top_right ul li::before {
+    content: '';
+    position: absolute;
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: 0;
+    display: block;
+    transform: scale(0);
+    transition: var(--fast-transition);
+}
+
+.top_right ul li::before {
+    top: auto;
+    bottom: 0;
+}
+
+.top_right ul li a {
+    display: inline-block;
+    color: #353535;
+    width: 30px;
+    height: 30px;
+    line-height: 34px;
+    text-align: center;
+}
+
+.top_right ul li a::after,
+.top_right ul li a::before {
+    content: '';
+    position: absolute;
+    background-color: var(--secondary-color);
+    width: 1px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: block;
+    transform: scale(0);
+    transition: var(--fast-transition);
+}
+
+.top_right ul li a::before {
+    top: auto;
+    left: 0;
+}
+
+.top_right ul li:hover::after,
+.top_right ul li:hover::before,
+.top_right ul li:hover a::after,
+.top_right ul li:hover a::before {
+    transform: scale(1.2);
+}
+
+
+/* Top Header Section CSS End*/
+
+
+/* Nav Section CSS Start*/
+
+#main-menu ul li {
+    margin: 0 18px;
+    position: relative;
+}
+
+#main-menu ul li::after,
+#main-menu ul li::before {
+    content: '';
+    position: absolute;
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: 0;
+    display: block;
+    transform: scale(0);
+    transition: var(--fast-transition);
+}
+
+#main-menu ul li::before {
+    top: auto;
+    bottom: 0;
+}
+
+#main-menu ul li a {
+    color: #353535;
+    font-size: 16px;
+    font-weight: 500;
+    transition: var(--fast-transition);
+}
+
+#main-menu ul li a:hover {
+    color: var(--primary-color);
+}
+
+#main-menu ul li a::after,
+#main-menu ul li a::before {
+    content: '';
+    position: absolute;
+    background-color: var(--secondary-color);
+    width: 1px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: block;
+    transform: scale(0);
+    transition: var(--fast-transition);
+}
+
+#main-menu ul li a::before {
+    right: auto;
+    left: 0;
+}
+
+#main-menu ul li:hover::after,
+#main-menu ul li:hover::before,
+#main-menu ul li:hover a::after,
+#main-menu ul li:hover a::before {
+    transform: scale(1.2);
+    background-color: #FFCA36;
+}
+
+#active_menu span {
+    display: block;
+    width: 22px;
+    height: 1px;
+    background: black;
+    margin-bottom: 3px;
+    transition: var(--fast-transition);
+}
+
+#active_menu:hover span {
+    background-color: #FFCA36;
+}
+
+#active_menu span:nth-child(odd) {
+    width: 18px;
+    margin-left: auto;
+}
+
+
+/* Nav Section CSS End*/
+
+
+/* Banner Section CSS Start*/
+
+#banner .banner_content {
+    height: 600px;
+    background-size: cover!important;
+    background-position: center;
+    background-repeat: no-repeat!important;
+    position: relative;
+    z-index: 1;
+}
+
+#banner .banner_content::after {
+    position: absolute;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.656);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#banner .context h2 {
+    color: #fff;
+}
+
+#banner .context h2 span {
+    color: #FFCA36;
+}
+
+#banner .context p {
+    color: #fff;
+    width: 40%;
+    padding: 30px 0 20px 0;
+    line-height: 26px;
+}
+
+#banner .context_btn a {
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 18px;
+    font-size: 20px;
+    transition: var(--fast-transition);
+    position: relative;
+    z-index: 1;
+}
+
+#banner .context_btn a:hover {
+    border-color: #FFCA36;
+    color: #353535;
+}
+
+#banner .context_btn a::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 100%;
+    background-color: #FFCA36;
+    top: 0;
+    left: 0;
+    transition: var(--fast-transition);
+}
+
+#banner .context_btn a:hover::after {
+    width: 100%;
+    z-index: -1;
+}
+
+#banner .context_btn_1 {
+    margin-right: 30px;
+}
+
+.banner-icons.fa.fa-chevron-left.prv-arrow.slick-arrow {
+    position: absolute;
+    top: 45%;
+    transform: translateY(50%);
+    left: 2%;
+    z-index: 1;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 23px;
+    text-align: center;
+}
+
+.banner-icons.fa.fa-chevron-right.nxt-arrow.slick-arrow {
+    position: absolute;
+    top: 45%;
+    transform: translateY(50%);
+    right: 2%;
+    z-index: 1;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 23px;
+    text-align: center;
+}
+
+.slick-arrow {
+    cursor: pointer;
+}
+
+
+/* Banner Section CSS End*/
+
+
+/* Services Section CSS Start*/
+
+#services {
+    padding: 60px 0;
+}
+
+#services .service_header {
+    text-align: center;
+    margin: 0px 0 80px 0;
+}
+
+#services .service_header h2 {
+    font-size: 35px;
+    font-weight: 300;
+    color: #555;
+}
+
+#services .service_header p {
+    width: 28%;
+    font-size: 16px;
+    margin: 0 auto;
+    padding-top: 13px;
+    color: #555;
+}
+
+#services .service_content {
+    text-align: center;
+    margin: 0 8px;
+}
+
+#services .service_img {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border: 1px solid #353535;
+    margin: 0 auto;
+    transform: rotate(45deg);
+    margin-bottom: 81px;
+    transition: var(--fast-transition);
+}
+
+#services .service_img img {
+    transform: rotate(-45deg);
+}
+
+#services .service_des {
+    border: 1px solid #353535;
+    padding: 40px;
+    color: #555;
+    transition: var(--fast-transition);
+    position: relative;
+}
+
+#services .service_des::before {
+    position: absolute;
+    content: '';
+    height: 60px;
+    width: 2px;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px dashed #353535;
+    transition: var(--fast-transition);
+}
+
+#services .service_content:hover .service_des,
+#services .service_content:hover .service_img {
+    border: 1px solid #FFCA36;
+}
+
+#services .service_content:hover .service_des::before {
+    border: 2px dashed #FFCA36;
+}
+
+#services .service_des h3 {
+    font-weight: 400;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+#services .service_des p {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/* Services Section CSS End*/
